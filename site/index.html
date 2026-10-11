@@ -2,40 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="theme-color" content="#070B14">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AI Hedge Fund League</title>
 <meta name="description" content="Frontier AI models each run a live $1,000,000 fund. Same market brief every trading day, same rules, no hindsight. Which AI is the best fund manager?">
-  <meta property="og:title" content="Which AI is the best fund manager?">
-  <meta property="og:description" content="Frontier AI models each run a live $1M fund. New decisions every trading day. Ranked against the S&P 500.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:image" content="https://itsarcvale.github.io/ai-fund-league/og.png">
-  <meta property="og:url" content="https://itsarcvale.github.io/ai-fund-league/">
-  <meta name="twitter:image" content="https://itsarcvale.github.io/ai-fund-league/og.png">
+<meta property="og:title" content="Which AI is the best fund manager?">
+<meta property="og:description" content="Frontier AI models each run a live $1M fund. New decisions every trading day. Ranked against the S&P 500.">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://itsarcvale.github.io/ai-fund-league/og.png">
+<meta property="og:url" content="https://itsarcvale.github.io/ai-fund-league/">
+<meta name="twitter:image" content="https://itsarcvale.github.io/ai-fund-league/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: institutional research report. Fixed top bar; a two-column grid per section (label rail left, content right); hairline structure, no cards, numbers carry the page. Type: Geist + Geist Mono. */
 :root{
-  --bg:#FFFFFF; --panel:#FFFFFF; --fg:#0B0D10; --ink2:#2A2F36; --muted:#6A717C; --line:#E4E6EA; --soft:#F4F5F7;
-  --accent:#0E5E43; --pos:#0E7A4F; --neg:#B4321F; --warn:#9A6A12;
+  /* Midnight: deep navy, dotted grid, teal + indigo glow */
+  --bg:#070B14; --panel:#0B1120; --fg:#E8EDF7; --ink2:#B9C3D6; --muted:#7D8AA3; --line:#1A2336; --soft:#0E1626;
+  --accent:#5EEAD4; --pos:#34D399; --neg:#F87171; --warn:#FBBF24;
   --sans:"Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; --mono:"Geist Mono", ui-monospace, Menlo, monospace;
   --serif:var(--sans);
-  color-scheme:light;
+  color-scheme:dark;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#0B0C0E; --panel:#0B0C0E; --fg:#ECEDEF; --ink2:#C9CCD1; --muted:#8A909A; --line:#23262B; --soft:#15171A;
-  --accent:#5CC79B; --pos:#4CC38A; --neg:#F0705D; --warn:#D9A54A; color-scheme:dark } }
-:root[data-theme="dark"]{
-  --bg:#0B0C0E; --panel:#0B0C0E; --fg:#ECEDEF; --ink2:#C9CCD1; --muted:#8A909A; --line:#23262B; --soft:#15171A;
-  --accent:#5CC79B; --pos:#4CC38A; --neg:#F0705D; --warn:#D9A54A; color-scheme:dark }
 *{box-sizing:border-box}
 html{padding-bottom:env(safe-area-inset-bottom,0px)}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{margin:0;background-color:var(--bg);background-image:radial-gradient(900px 500px at 85% -10%,rgba(94,234,212,.16),transparent 60%),radial-gradient(700px 500px at 0% 0%,rgba(99,102,241,.18),transparent 60%),radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:auto,auto,22px 22px;background-attachment:fixed;color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
 [hidden]{display:none!important}
 a{color:inherit}
 /* top bar */
-.topbar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.topbar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
 .topbar .in{max-width:1120px;margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;gap:28px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
 .brand .mark{width:22px;height:22px;border:1.5px solid var(--fg);display:grid;place-items:center;font-family:var(--mono);font-size:11px;font-weight:500}
@@ -358,7 +354,7 @@ function tape(R){
   const T=R.tape||{}; if(!Object.keys(T).length) return;
   const net=a=>R.funds.length?R.funds.reduce((s,f)=>s+(f.book[a]||0),0)/R.funds.length:null;
   const items=Object.entries(T).map(([a,t])=>{const n=net(a);const px=t.price>=1000?t.price.toLocaleString("en-US",{maximumFractionDigits:0}):t.price.toFixed(2);
-    return `<span class="it"><b>${a}</b>${px}<span class="${t.w1>=0?"pos":"neg"}">${pct(t.w1,1)} 1w</span>${n==null?"":`<span class="net">AI net ${n>=0?"+":"−"}${Math.round(Math.abs(n)*100)}%</span>`}</span>`;}).join("");
+    return `<span class="it"><b>${a}</b>${px}${t.d1!=null?`<span class="${t.d1>=0?"pos":"neg"}">${pct(t.d1,1)} 1d</span>`:`<span class="${t.w1>=0?"pos":"neg"}">${pct(t.w1,1)} 1w</span>`}${n==null?"":`<span class="net">AI net ${n>=0?"+":"−"}${Math.round(Math.abs(n)*100)}%</span>`}</span>`;}).join("");
   $("tapeRun").innerHTML=items+items; $("tape").hidden=false;
 }
 
