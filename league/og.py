@@ -9,8 +9,8 @@ ROOT = pathlib.Path(__file__).resolve().parent
 FONTS = ROOT / "fonts"
 OUT = ROOT.parent / "site" / "og.png"
 
-BG, PANEL, FG, MU, LINE = (12, 14, 19), (20, 23, 31), (233, 236, 242), (144, 151, 165), (37, 42, 53)
-POS, NEG, ACC = (59, 196, 138), (255, 107, 94), (140, 149, 255)
+BG, PANEL, FG, MU, LINE = (7, 11, 20), (14, 22, 38), (232, 237, 247), (125, 138, 163), (26, 35, 54)
+POS, NEG, ACC = (52, 211, 153), (248, 113, 113), (94, 234, 212)
 
 
 def _f(name, size):
@@ -32,7 +32,7 @@ def render(r: dict, out: pathlib.Path = OUT):
     else:
         status = f"SEASON {r['season']} · STARTS {r['start']}"
     tw = d.textlength(status, font=_f("DejaVuSansMono.ttf", 18))
-    d.text((W - 56 - tw, 48), status, font=_f("DejaVuSansMono.ttf", 18), fill=POS if r.get("funds") else (227, 168, 74))
+    d.text((W - 56 - tw, 48), status, font=_f("DejaVuSansMono.ttf", 18), fill=POS if r.get("funds") else (251, 191, 36))
     d.text((56, 88), "Which AI is the best", font=_f("Inter-Bold.otf", 60), fill=FG)
     d.text((56, 156), "fund manager?", font=_f("Inter-Bold.otf", 60), fill=FG)
 

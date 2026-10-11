@@ -186,7 +186,9 @@ def write_results(st, today):
         rows = [r for r in market.series(sym) if r["date"] <= today]
         ref = next((r["close"] for r in reversed(rows) if r["date"] <= (dt.date.fromisoformat(today) - dt.timedelta(days=7)).isoformat()), None)
         if px:
-            tape[sym] = {"price": round(px, 2), "w1": round((px / ref - 1) * 100, 2) if ref else None}
+            prev = rows[-2]["close"] if len(rows) >= 2 else None
+            tape[sym] = {"price": round(px, 2), "w1": round((px / ref - 1) * 100, 2) if ref else None,
+                         "d1": round((px / prev - 1) * 100, 2) if prev else None}
     out = {"season": st["season"], "start": st["start"], "updated": today, "week": len(st["weeks"]), "tape": tape,
            "pending": bool(st.get("pending")), "assets": {k: v[0] for k, v in config.ASSETS.items()},
            "roster": [{k: m[k] for k in ("id", "name", "lab", "color", "model")} for m in config.MANAGERS],
