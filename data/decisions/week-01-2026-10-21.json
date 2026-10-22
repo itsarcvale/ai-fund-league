@@ -1,0 +1,183 @@
+{
+ "asof": "2026-10-21",
+ "created": "2026-10-22T12:20:02Z",
+ "week": 1,
+ "orders": {
+  "claude-opus-5.5": {
+   "weights": {
+    "SPY": 0.3,
+    "QQQ": 0.1,
+    "NVDA": 0.05,
+    "AAPL": 0.05,
+    "USO": 0.1,
+    "BTC": 0.1
+   },
+   "thesis": "Steady equity uptrend with rising yields and oil momentum; favor equities, oil, bitcoin over duration.",
+   "note": "Initial deployment from cash: core SPY with modest tech, oil and bitcoin trend exposure. Avoid TLT and gold given rising yields and a stronger dollar. Keep 30% cash because VIX is rising and cash yields near 3.9%.",
+   "model": "anthropic/claude-opus-5.5",
+   "usage": {
+    "prompt_tokens": 1939,
+    "completion_tokens": 234,
+    "cost_usd": 0.012436,
+    "seconds": 7.7,
+    "served_by": "anthropic/claude-opus-5.5"
+   },
+   "status": "ok",
+   "brief": "MARKET BRIEF \u2014 data through 2026-10-21 (closing prices)\n\nASSETS (price | 1d | 1w | 4w | 12w | 20d vol, annualised | vs 50-day avg | vs 52-week high)\nSPY   S&P 500 ETF                    773.09 |  +0.5% |   +0.5% |   +0.7% |   +6.0% |   8.6% |   +0.6% |   -0.8%\nQQQ   Nasdaq-100 ETF                 725.20 |  +1.1% |   -0.5% |   -2.2% |   +9.6% |  15.6% |   -0.2% |   -4.5%\nNVDA  Nvidia                         221.97 |  +2.5% |   +0.3% |   -1.6% |  +16.8% |  24.5% |   -0.5% |   -7.2%\nAAPL  Apple                          343.99 |  +1.3% |   +0.3% |   +2.1% |   +1.7% |  16.5% |   +5.0% |   +0.0%\nTLT   20+ Year Treasury ETF           80.24 |  +0.1% |   +1.7% |   -0.3% |   -3.2% |  10.1% |   -0.4% |  -12.8%\nGLD   Gold ETF                       378.95 |  +0.3% |   +0.8% |   -3.5% |   +2.1% |  20.1% |   -4.3% |  -23.6%\nUSO   Oil ETF                        159.80 |  -0.5% |   +4.1% |   +7.4% |  +23.6% |  33.1% |  +10.3% |   -1.3%\nBTC   Bitcoin                     84,436.30 |  +2.3% |   +3.3% |   -0.1% |  +32.9% |  22.8% |   +3.3% |   -2.4%\nETH   Ether                        2,493.09 |  +2.4% |   +2.7% |   -6.9% |  +32.2% |  39.5% |   -2.3% |   -9.7%\n\nMACRO (latest | change over 4 weeks)\n- US 10y Treasury yield (%): 5.12 (+0.16)\n- US 2y Treasury yield (%): 4.79 (+0.08)\n- Fed funds rate (%): 3.88 (+0.00)\n- VIX: 17.31 (+3.10)\n- Broad US dollar index: 121.40 (+1.89)\n- CPI inflation, year over year: 3.7% (as of 2026-09)\n\nYOUR FUND \u2014 day 1\n- Net asset value: $1,000,000 (+0.00% since you started with $1,000,000)\n- Current book (share of NAV): 100% cash\n- Your last thesis: none yet\n\nSet your target weights for today."
+  },
+  "gpt-6-astra": {
+   "weights": {
+    "SPY": 0.4,
+    "AAPL": 0.05,
+    "USO": 0.07,
+    "BTC": 0.08
+   },
+   "thesis": "Favor low-volatility broad equities and selective momentum, while elevated yields and rising volatility warrant substantial cash.",
+   "note": "Deploy 60% of initial cash into SPY, AAPL, USO, and BTC, emphasizing SPY's lower realized volatility. Keep oil and bitcoin positions modest given their risks, and retain 40% cash. Avoid weaker technology, gold, and long-duration Treasury trends; closing execution argues against chasing today's rebound.",
+   "model": "openai/gpt-6-astra",
+   "usage": {
+    "prompt_tokens": 1241,
+    "completion_tokens": 266,
+    "cost_usd": 0.028805,
+    "seconds": 10.3,
+    "served_by": "openai/gpt-6-astra"
+   },
+   "status": "ok",
+   "brief": "MARKET BRIEF \u2014 data through 2026-10-21 (closing prices)\n\nASSETS (price | 1d | 1w | 4w | 12w | 20d vol, annualised | vs 50-day avg | vs 52-week high)\nSPY   S&P 500 ETF                    773.09 |  +0.5% |   +0.5% |   +0.7% |   +6.0% |   8.6% |   +0.6% |   -0.8%\nQQQ   Nasdaq-100 ETF                 725.20 |  +1.1% |   -0.5% |   -2.2% |   +9.6% |  15.6% |   -0.2% |   -4.5%\nNVDA  Nvidia                         221.97 |  +2.5% |   +0.3% |   -1.6% |  +16.8% |  24.5% |   -0.5% |   -7.2%\nAAPL  Apple                          343.99 |  +1.3% |   +0.3% |   +2.1% |   +1.7% |  16.5% |   +5.0% |   +0.0%\nTLT   20+ Year Treasury ETF           80.24 |  +0.1% |   +1.7% |   -0.3% |   -3.2% |  10.1% |   -0.4% |  -12.8%\nGLD   Gold ETF                       378.95 |  +0.3% |   +0.8% |   -3.5% |   +2.1% |  20.1% |   -4.3% |  -23.6%\nUSO   Oil ETF                        159.80 |  -0.5% |   +4.1% |   +7.4% |  +23.6% |  33.1% |  +10.3% |   -1.3%\nBTC   Bitcoin                     84,436.30 |  +2.3% |   +3.3% |   -0.1% |  +32.9% |  22.8% |   +3.3% |   -2.4%\nETH   Ether                        2,493.09 |  +2.4% |   +2.7% |   -6.9% |  +32.2% |  39.5% |   -2.3% |   -9.7%\n\nMACRO (latest | change over 4 weeks)\n- US 10y Treasury yield (%): 5.12 (+0.16)\n- US 2y Treasury yield (%): 4.79 (+0.08)\n- Fed funds rate (%): 3.88 (+0.00)\n- VIX: 17.31 (+3.10)\n- Broad US dollar index: 121.40 (+1.89)\n- CPI inflation, year over year: 3.7% (as of 2026-09)\n\nYOUR FUND \u2014 day 1\n- Net asset value: $1,000,000 (+0.00% since you started with $1,000,000)\n- Current book (share of NAV): 100% cash\n- Your last thesis: none yet\n\nSet your target weights for today."
+  },
+  "grok-4.7": {
+   "weights": {
+    "SPY": 0.28,
+    "NVDA": 0.06,
+    "AAPL": 0.08,
+    "USO": 0.06,
+    "BTC": 0.1
+   },
+   "thesis": "Low-vol equities and selective momentum beat bonds while yields and the dollar rise.",
+   "note": "Opened a moderate book from cash: core SPY, smaller AAPL and NVDA, plus oil and bitcoin. Skipped bonds and gold as yields and the dollar climb. Kept substantial cash because VIX is up and several leaders look extended.",
+   "model": "x-ai/grok-4.7",
+   "usage": {
+    "prompt_tokens": 2581,
+    "completion_tokens": 1633,
+    "cost_usd": 0.013232,
+    "seconds": 21.0,
+    "served_by": "x-ai/grok-4.7"
+   },
+   "status": "ok",
+   "brief": "MARKET BRIEF \u2014 data through 2026-10-21 (closing prices)\n\nASSETS (price | 1d | 1w | 4w | 12w | 20d vol, annualised | vs 50-day avg | vs 52-week high)\nSPY   S&P 500 ETF                    773.09 |  +0.5% |   +0.5% |   +0.7% |   +6.0% |   8.6% |   +0.6% |   -0.8%\nQQQ   Nasdaq-100 ETF                 725.20 |  +1.1% |   -0.5% |   -2.2% |   +9.6% |  15.6% |   -0.2% |   -4.5%\nNVDA  Nvidia                         221.97 |  +2.5% |   +0.3% |   -1.6% |  +16.8% |  24.5% |   -0.5% |   -7.2%\nAAPL  Apple                          343.99 |  +1.3% |   +0.3% |   +2.1% |   +1.7% |  16.5% |   +5.0% |   +0.0%\nTLT   20+ Year Treasury ETF           80.24 |  +0.1% |   +1.7% |   -0.3% |   -3.2% |  10.1% |   -0.4% |  -12.8%\nGLD   Gold ETF                       378.95 |  +0.3% |   +0.8% |   -3.5% |   +2.1% |  20.1% |   -4.3% |  -23.6%\nUSO   Oil ETF                        159.80 |  -0.5% |   +4.1% |   +7.4% |  +23.6% |  33.1% |  +10.3% |   -1.3%\nBTC   Bitcoin                     84,436.30 |  +2.3% |   +3.3% |   -0.1% |  +32.9% |  22.8% |   +3.3% |   -2.4%\nETH   Ether                        2,493.09 |  +2.4% |   +2.7% |   -6.9% |  +32.2% |  39.5% |   -2.3% |   -9.7%\n\nMACRO (latest | change over 4 weeks)\n- US 10y Treasury yield (%): 5.12 (+0.16)\n- US 2y Treasury yield (%): 4.79 (+0.08)\n- Fed funds rate (%): 3.88 (+0.00)\n- VIX: 17.31 (+3.10)\n- Broad US dollar index: 121.40 (+1.89)\n- CPI inflation, year over year: 3.7% (as of 2026-09)\n\nYOUR FUND \u2014 day 1\n- Net asset value: $1,000,000 (+0.00% since you started with $1,000,000)\n- Current book (share of NAV): 100% cash\n- Your last thesis: none yet\n\nSet your target weights for today."
+  },
+  "gemini-3.8-flash": {
+   "weights": {
+    "SPY": 0.2,
+    "QQQ": 0.1,
+    "NVDA": 0.1,
+    "AAPL": 0.15,
+    "TLT": -0.1,
+    "GLD": 0.05,
+    "USO": 0.1,
+    "BTC": 0.1
+   },
+   "thesis": "Favor momentum leaders and energy hedges while shorting long duration in a sticky inflation environment.",
+   "note": "Initiated day one deployment targeting strong relative strength in AAPL, BTC, and USO. Faded TLT due to elevated inflation and 10-year yields climbing past 5.1%.",
+   "model": "google/gemini-3.8-flash",
+   "usage": {
+    "prompt_tokens": 1530,
+    "completion_tokens": 599,
+    "cost_usd": 0.00339375,
+    "seconds": 5.3,
+    "served_by": "google/gemini-3.8-flash"
+   },
+   "status": "ok",
+   "brief": "MARKET BRIEF \u2014 data through 2026-10-21 (closing prices)\n\nASSETS (price | 1d | 1w | 4w | 12w | 20d vol, annualised | vs 50-day avg | vs 52-week high)\nSPY   S&P 500 ETF                    773.09 |  +0.5% |   +0.5% |   +0.7% |   +6.0% |   8.6% |   +0.6% |   -0.8%\nQQQ   Nasdaq-100 ETF                 725.20 |  +1.1% |   -0.5% |   -2.2% |   +9.6% |  15.6% |   -0.2% |   -4.5%\nNVDA  Nvidia                         221.97 |  +2.5% |   +0.3% |   -1.6% |  +16.8% |  24.5% |   -0.5% |   -7.2%\nAAPL  Apple                          343.99 |  +1.3% |   +0.3% |   +2.1% |   +1.7% |  16.5% |   +5.0% |   +0.0%\nTLT   20+ Year Treasury ETF           80.24 |  +0.1% |   +1.7% |   -0.3% |   -3.2% |  10.1% |   -0.4% |  -12.8%\nGLD   Gold ETF                       378.95 |  +0.3% |   +0.8% |   -3.5% |   +2.1% |  20.1% |   -4.3% |  -23.6%\nUSO   Oil ETF                        159.80 |  -0.5% |   +4.1% |   +7.4% |  +23.6% |  33.1% |  +10.3% |   -1.3%\nBTC   Bitcoin                     84,436.30 |  +2.3% |   +3.3% |   -0.1% |  +32.9% |  22.8% |   +3.3% |   -2.4%\nETH   Ether                        2,493.09 |  +2.4% |   +2.7% |   -6.9% |  +32.2% |  39.5% |   -2.3% |   -9.7%\n\nMACRO (latest | change over 4 weeks)\n- US 10y Treasury yield (%): 5.12 (+0.16)\n- US 2y Treasury yield (%): 4.79 (+0.08)\n- Fed funds rate (%): 3.88 (+0.00)\n- VIX: 17.31 (+3.10)\n- Broad US dollar index: 121.40 (+1.89)\n- CPI inflation, year over year: 3.7% (as of 2026-09)\n\nYOUR FUND \u2014 day 1\n- Net asset value: $1,000,000 (+0.00% since you started with $1,000,000)\n- Current book (share of NAV): 100% cash\n- Your last thesis: none yet\n\nSet your target weights for today."
+  },
+  "deepseek-v4-pro": {
+   "weights": {
+    "SPY": 0.25,
+    "QQQ": 0.1,
+    "NVDA": 0.05,
+    "AAPL": 0.1,
+    "USO": 0.12,
+    "BTC": 0.12
+   },
+   "thesis": "Deploy into equity leaders, oil, and bitcoin while keeping cash buffer amid rising yields and VIX.",
+   "note": "Initial allocation from cash: long SPY/QQQ/NVDA/AAPL for equity exposure, plus USO and BTC for momentum. Avoiding bonds and gold given rising yields and strong dollar; cash buffer reduces drawdown risk.",
+   "model": "deepseek/deepseek-v4-pro-0813",
+   "usage": {
+    "prompt_tokens": 1107,
+    "completion_tokens": 2825,
+    "cost_usd": 0.011431728,
+    "seconds": 33.9,
+    "served_by": "deepseek/deepseek-v4-pro-0813"
+   },
+   "status": "ok",
+   "brief": "MARKET BRIEF \u2014 data through 2026-10-21 (closing prices)\n\nASSETS (price | 1d | 1w | 4w | 12w | 20d vol, annualised | vs 50-day avg | vs 52-week high)\nSPY   S&P 500 ETF                    773.09 |  +0.5% |   +0.5% |   +0.7% |   +6.0% |   8.6% |   +0.6% |   -0.8%\nQQQ   Nasdaq-100 ETF                 725.20 |  +1.1% |   -0.5% |   -2.2% |   +9.6% |  15.6% |   -0.2% |   -4.5%\nNVDA  Nvidia                         221.97 |  +2.5% |   +0.3% |   -1.6% |  +16.8% |  24.5% |   -0.5% |   -7.2%\nAAPL  Apple                          343.99 |  +1.3% |   +0.3% |   +2.1% |   +1.7% |  16.5% |   +5.0% |   +0.0%\nTLT   20+ Year Treasury ETF           80.24 |  +0.1% |   +1.7% |   -0.3% |   -3.2% |  10.1% |   -0.4% |  -12.8%\nGLD   Gold ETF                       378.95 |  +0.3% |   +0.8% |   -3.5% |   +2.1% |  20.1% |   -4.3% |  -23.6%\nUSO   Oil ETF                        159.80 |  -0.5% |   +4.1% |   +7.4% |  +23.6% |  33.1% |  +10.3% |   -1.3%\nBTC   Bitcoin                     84,436.30 |  +2.3% |   +3.3% |   -0.1% |  +32.9% |  22.8% |   +3.3% |   -2.4%\nETH   Ether                        2,493.09 |  +2.4% |   +2.7% |   -6.9% |  +32.2% |  39.5% |   -2.3% |   -9.7%\n\nMACRO (latest | change over 4 weeks)\n- US 10y Treasury yield (%): 5.12 (+0.16)\n- US 2y Treasury yield (%): 4.79 (+0.08)\n- Fed funds rate (%): 3.88 (+0.00)\n- VIX: 17.31 (+3.10)\n- Broad US dollar index: 121.40 (+1.89)\n- CPI inflation, year over year: 3.7% (as of 2026-09)\n\nYOUR FUND \u2014 day 1\n- Net asset value: $1,000,000 (+0.00% since you started with $1,000,000)\n- Current book (share of NAV): 100% cash\n- Your last thesis: none yet\n\nSet your target weights for today."
+  },
+  "qwen-3.8-max": {
+   "weights": {
+    "SPY": 0.25,
+    "QQQ": 0.15,
+    "NVDA": 0.1,
+    "AAPL": 0.1,
+    "TLT": 0.05,
+    "GLD": 0.05,
+    "USO": 0.05,
+    "BTC": 0.1,
+    "ETH": 0.05
+   },
+   "thesis": "Equities near highs with rising yields favor quality, momentum, and selective diversification.",
+   "note": "Day 1 deployment: overweight SPY for steady equity exposure, QQQ and NVDA for tech momentum, AAPL at 52-week high. Small gold and oil for inflation hedge. Crypto for asymmetric upside. Keep 10% cash given elevated VIX and rising rates.",
+   "model": "qwen/qwen3.8-max-prime",
+   "usage": {
+    "prompt_tokens": 1283,
+    "completion_tokens": 1575,
+    "cost_usd": 0.024032,
+    "seconds": 22.2,
+    "served_by": "qwen/qwen3.8-max-prime"
+   },
+   "status": "ok",
+   "brief": "MARKET BRIEF \u2014 data through 2026-10-21 (closing prices)\n\nASSETS (price | 1d | 1w | 4w | 12w | 20d vol, annualised | vs 50-day avg | vs 52-week high)\nSPY   S&P 500 ETF                    773.09 |  +0.5% |   +0.5% |   +0.7% |   +6.0% |   8.6% |   +0.6% |   -0.8%\nQQQ   Nasdaq-100 ETF                 725.20 |  +1.1% |   -0.5% |   -2.2% |   +9.6% |  15.6% |   -0.2% |   -4.5%\nNVDA  Nvidia                         221.97 |  +2.5% |   +0.3% |   -1.6% |  +16.8% |  24.5% |   -0.5% |   -7.2%\nAAPL  Apple                          343.99 |  +1.3% |   +0.3% |   +2.1% |   +1.7% |  16.5% |   +5.0% |   +0.0%\nTLT   20+ Year Treasury ETF           80.24 |  +0.1% |   +1.7% |   -0.3% |   -3.2% |  10.1% |   -0.4% |  -12.8%\nGLD   Gold ETF                       378.95 |  +0.3% |   +0.8% |   -3.5% |   +2.1% |  20.1% |   -4.3% |  -23.6%\nUSO   Oil ETF                        159.80 |  -0.5% |   +4.1% |   +7.4% |  +23.6% |  33.1% |  +10.3% |   -1.3%\nBTC   Bitcoin                     84,436.30 |  +2.3% |   +3.3% |   -0.1% |  +32.9% |  22.8% |   +3.3% |   -2.4%\nETH   Ether                        2,493.09 |  +2.4% |   +2.7% |   -6.9% |  +32.2% |  39.5% |   -2.3% |   -9.7%\n\nMACRO (latest | change over 4 weeks)\n- US 10y Treasury yield (%): 5.12 (+0.16)\n- US 2y Treasury yield (%): 4.79 (+0.08)\n- Fed funds rate (%): 3.88 (+0.00)\n- VIX: 17.31 (+3.10)\n- Broad US dollar index: 121.40 (+1.89)\n- CPI inflation, year over year: 3.7% (as of 2026-09)\n\nYOUR FUND \u2014 day 1\n- Net asset value: $1,000,000 (+0.00% since you started with $1,000,000)\n- Current book (share of NAV): 100% cash\n- Your last thesis: none yet\n\nSet your target weights for today."
+  },
+  "kimi-k3": {
+   "weights": {
+    "SPY": 0.35,
+    "QQQ": 0.15,
+    "NVDA": 0.15,
+    "GLD": 0.05,
+    "USO": 0.1,
+    "BTC": 0.1
+   },
+   "thesis": "Cautiously risk-on: equity and crypto momentum intact, but rising yields and VIX warrant diversification and cash buffer.",
+   "note": "Initiating from cash with core SPY position, tech tilt via QQQ/NVDA on strong 12-week momentum, plus BTC and small USO for commodity strength. Keeping 10% cash given elevated 5.12% 10y yield and rising VIX signal near-term fragility.",
+   "model": "moonshotai/kimi-k3",
+   "usage": {
+    "prompt_tokens": 1423,
+    "completion_tokens": 225,
+    "cost_usd": 0.003025697,
+    "seconds": 6.7,
+    "served_by": "moonshotai/kimi-k3"
+   },
+   "status": "ok",
+   "brief": "MARKET BRIEF \u2014 data through 2026-10-21 (closing prices)\n\nASSETS (price | 1d | 1w | 4w | 12w | 20d vol, annualised | vs 50-day avg | vs 52-week high)\nSPY   S&P 500 ETF                    773.09 |  +0.5% |   +0.5% |   +0.7% |   +6.0% |   8.6% |   +0.6% |   -0.8%\nQQQ   Nasdaq-100 ETF                 725.20 |  +1.1% |   -0.5% |   -2.2% |   +9.6% |  15.6% |   -0.2% |   -4.5%\nNVDA  Nvidia                         221.97 |  +2.5% |   +0.3% |   -1.6% |  +16.8% |  24.5% |   -0.5% |   -7.2%\nAAPL  Apple                          343.99 |  +1.3% |   +0.3% |   +2.1% |   +1.7% |  16.5% |   +5.0% |   +0.0%\nTLT   20+ Year Treasury ETF           80.24 |  +0.1% |   +1.7% |   -0.3% |   -3.2% |  10.1% |   -0.4% |  -12.8%\nGLD   Gold ETF                       378.95 |  +0.3% |   +0.8% |   -3.5% |   +2.1% |  20.1% |   -4.3% |  -23.6%\nUSO   Oil ETF                        159.80 |  -0.5% |   +4.1% |   +7.4% |  +23.6% |  33.1% |  +10.3% |   -1.3%\nBTC   Bitcoin                     84,436.30 |  +2.3% |   +3.3% |   -0.1% |  +32.9% |  22.8% |   +3.3% |   -2.4%\nETH   Ether                        2,493.09 |  +2.4% |   +2.7% |   -6.9% |  +32.2% |  39.5% |   -2.3% |   -9.7%\n\nMACRO (latest | change over 4 weeks)\n- US 10y Treasury yield (%): 5.12 (+0.16)\n- US 2y Treasury yield (%): 4.79 (+0.08)\n- Fed funds rate (%): 3.88 (+0.00)\n- VIX: 17.31 (+3.10)\n- Broad US dollar index: 121.40 (+1.89)\n- CPI inflation, year over year: 3.7% (as of 2026-09)\n\nYOUR FUND \u2014 day 1\n- Net asset value: $1,000,000 (+0.00% since you started with $1,000,000)\n- Current book (share of NAV): 100% cash\n- Your last thesis: none yet\n\nSet your target weights for today."
+  },
+  "step-5": {
+   "weights": {
+    "SPY": 0.35,
+    "AAPL": 0.25,
+    "USO": 0.1,
+    "BTC": 0.05
+   },
+   "thesis": "Favor quality equity momentum and oil; stay liquid as rates and volatility rise.",
+   "note": "Day 1: built core in low-vol SPY and momentum leader AAPL. Added small USO and BTC for diversification; rest cash because yields, dollar, and VIX are rising.",
+   "model": "stepfun/step-5-preview",
+   "usage": {
+    "prompt_tokens": 1122,
+    "completion_tokens": 2705,
+    "cost_usd": 0.0084255,
+    "seconds": 54.5,
+    "served_by": "stepfun/step-5-preview"
+   },
+   "status": "ok",
+   "brief": "MARKET BRIEF \u2014 data through 2026-10-21 (closing prices)\n\nASSETS (price | 1d | 1w | 4w | 12w | 20d vol, annualised | vs 50-day avg | vs 52-week high)\nSPY   S&P 500 ETF                    773.09 |  +0.5% |   +0.5% |   +0.7% |   +6.0% |   8.6% |   +0.6% |   -0.8%\nQQQ   Nasdaq-100 ETF                 725.20 |  +1.1% |   -0.5% |   -2.2% |   +9.6% |  15.6% |   -0.2% |   -4.5%\nNVDA  Nvidia                         221.97 |  +2.5% |   +0.3% |   -1.6% |  +16.8% |  24.5% |   -0.5% |   -7.2%\nAAPL  Apple                          343.99 |  +1.3% |   +0.3% |   +2.1% |   +1.7% |  16.5% |   +5.0% |   +0.0%\nTLT   20+ Year Treasury ETF           80.24 |  +0.1% |   +1.7% |   -0.3% |   -3.2% |  10.1% |   -0.4% |  -12.8%\nGLD   Gold ETF                       378.95 |  +0.3% |   +0.8% |   -3.5% |   +2.1% |  20.1% |   -4.3% |  -23.6%\nUSO   Oil ETF                        159.80 |  -0.5% |   +4.1% |   +7.4% |  +23.6% |  33.1% |  +10.3% |   -1.3%\nBTC   Bitcoin                     84,436.30 |  +2.3% |   +3.3% |   -0.1% |  +32.9% |  22.8% |   +3.3% |   -2.4%\nETH   Ether                        2,493.09 |  +2.4% |   +2.7% |   -6.9% |  +32.2% |  39.5% |   -2.3% |   -9.7%\n\nMACRO (latest | change over 4 weeks)\n- US 10y Treasury yield (%): 5.12 (+0.16)\n- US 2y Treasury yield (%): 4.79 (+0.08)\n- Fed funds rate (%): 3.88 (+0.00)\n- VIX: 17.31 (+3.10)\n- Broad US dollar index: 121.40 (+1.89)\n- CPI inflation, year over year: 3.7% (as of 2026-09)\n\nYOUR FUND \u2014 day 1\n- Net asset value: $1,000,000 (+0.00% since you started with $1,000,000)\n- Current book (share of NAV): 100% cash\n- Your last thesis: none yet\n\nSet your target weights for today."
+  }
+ }
+}
